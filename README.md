@@ -2,7 +2,7 @@
 
 ## Moxa IT87 Watchdog driver
 the watchdog driver based on
-https://github.com/torvalds/linux/blob/v4.6/drivers/watchdog/it87_wdt.c
+https://elixir.bootlin.com/linux/v4.9.168/source/drivers/watchdog/it87_wdt.c
 
 ### Compile & install the driver
 
