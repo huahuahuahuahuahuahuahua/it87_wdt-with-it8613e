@@ -1,0 +1,5 @@
+moxa-it87-wdt-driver (4.9.168-1+deb9u4+1.0.0+deb9) stretch; urgency=low
+
+  * Initial release
+
+ -- Elvis Yao (姚家瑋) <ElvisCW.Yao@moxa.com>  Wed, 07 Aug 2019 14:24:58 +0800
