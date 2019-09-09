@@ -1,27 +1,21 @@
 # moxa-it87-wdt-driver
 
-## Moxa IT87 Watchdog driver
-the watchdog driver based on
-https://elixir.bootlin.com/linux/v4.9.168/source/drivers/watchdog/it87_wdt.c
+## Source
 
-### Compile & install the driver
+https://github.com/torvalds/linux/blob/v5.2/drivers/watchdog/it87_wdt.c
 
-#### Install build-essential packages
-```
-sudo apt-get install build-essential
-```
+## Dependence
 
-#### Compile the driver
+- Require `build-essential`
+
+## How to build
+
 ```
 make
 ```
 
-#### Compile and install the driver
-```
-make install
-```
+## How to load the watchdog driver
 
-#### Load the watchdog driver
 ```
-modprobe it8786_wdt
+insmod it87_wdt.ko
 ```
