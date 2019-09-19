@@ -2,6 +2,7 @@
 
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all,-relro
 export CC=gcc
+export KRELEASE=4.9.0-11-amd64
 
 #
 # Call debhelper for clean, build, binary
@@ -10,13 +11,13 @@ export CC=gcc
 	dh $@
 
 override_dh_auto_build:
-	$(MAKE) KDIR=/lib/modules/4.9.0-9-amd64/build
+	$(MAKE) modules
 
 override_dh_auto_install:
 	$(info Skip dh_auto_install)
 
 override_dh_auto_clean:
-	$(MAKE) KDIR=/lib/modules/4.9.0-9-amd64/build clean
+	$(MAKE) clean
 
 override_dh_strip:
 	dh_strip --no-automatic-dbgsym

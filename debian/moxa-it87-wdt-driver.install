@@ -1,1 +1,2 @@
-it8786_wdt.ko /lib/modules/4.9.0-9-amd64/kernel/drivers/watchdog
+it87_wdt.ko /lib/modules/4.9.0-11-amd64/kernel/drivers/watchdog
+it87_wdt.conf /usr/lib/modules-load.d
