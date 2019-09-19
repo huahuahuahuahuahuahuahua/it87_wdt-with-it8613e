@@ -2,6 +2,7 @@ Source: moxa-it87-wdt-driver
 Section: kernel
 Priority: optional
 Maintainer: Elvis Yao <ElvisCW.Yao@moxa.com>
+Uploaders: Remus Wu <RemusTY.Wu@moxa.com>
 Standards-Version: 4.1.2
 Build-Depends:
  debhelper (>= 10),
