@@ -2,14 +2,15 @@
 
 set -e
 
+# Ensure modules.dep is update
+update_moddep() {
+	KRELEASE=4.9.0-9-amd64
+	depmod "${KRELEASE}"
+}
+
 case "$1" in
 configure)
-	KERNEL_SYMBOL_NAME="4.9.0-9-amd64"
-	depmod "${KERNEL_SYMBOL_NAME}"
-	sync
-
-	if ! grep -wq "it8786_wdt" /etc/modules;\
-		then echo "it8786_wdt" >> /etc/modules; fi
+	update_moddep
 	;;
 
 abort-upgrade|abort-remove|abort-deconfigure)
