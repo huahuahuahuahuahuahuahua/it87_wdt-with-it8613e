@@ -13,4 +13,6 @@ Architecture: amd64
 Depends:
  ${misc:Depends},
  linux-image-4.9.0-9-amd64
+Replaces:
+ linux-image-4.9.0-9-amd64
 Description: The purpose of this driver is IT87 watchdog driver.
