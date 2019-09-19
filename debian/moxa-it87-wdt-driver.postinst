@@ -4,7 +4,7 @@ set -e
 
 # Ensure modules.dep is update
 update_moddep() {
-	KRELEASE=4.9.0-9-amd64
+	KRELEASE=4.9.0-11-amd64
 	depmod "${KRELEASE}"
 }
 

@@ -5,14 +5,14 @@ Maintainer: Elvis Yao <ElvisCW.Yao@moxa.com>
 Standards-Version: 4.1.2
 Build-Depends:
  debhelper (>= 10),
- linux-headers-4.9.0-9-amd64
+ linux-headers-4.9.0-11-amd64
 Homepage: https://www.moxa.com/
 
 Package: moxa-it87-wdt-driver
 Architecture: amd64
 Depends:
  ${misc:Depends},
- linux-image-4.9.0-9-amd64
+ linux-image-4.9.0-11-amd64
 Replaces:
- linux-image-4.9.0-9-amd64
+ linux-image-4.9.0-11-amd64
 Description: The purpose of this driver is IT87 watchdog driver.

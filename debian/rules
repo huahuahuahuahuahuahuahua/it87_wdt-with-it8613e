@@ -2,7 +2,7 @@
 
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all,-relro
 export CC=gcc
-export KRELEASE=4.9.0-9-amd64
+export KRELEASE=4.9.0-11-amd64
 
 #
 # Call debhelper for clean, build, binary
