@@ -9,7 +9,7 @@ Build-Depends:
  linux-headers-4.9.0-11-amd64
 Homepage: https://www.moxa.com/
 
-Package: moxa-it87-wdt-driver
+Package: moxa-it87-wdt-driver-amd64
 Architecture: amd64
 Depends:
  ${misc:Depends},

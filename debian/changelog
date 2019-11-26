@@ -1,18 +1,5 @@
-moxa-it87-wdt-driver (5.2+0.1.0+deb9) stretch; urgency=medium
-
-  * update build dependence
-  * update package description
-  * update KRELEASE to 4.9.0-11-amd64
-  * rename to align upstream
-  * update source to kernel 5.2
-  * fix conflict with linux-image
-  * add it8786 support
-  * add conf for modules-load.d
-
- -- Remus Wu <RemusTY.Wu@moxa.com>  Thu, 19 Sep 2019 17:41:28 +0800
-
-moxa-it87-wdt-driver (4.9.168-1+deb9u4+1.0.0+deb9) stretch; urgency=low
+moxa-it87-wdt-driver (5.2+1.0.0) stretch; urgency=medium
 
   * Initial release
 
- -- Elvis Yao (姚家瑋) <ElvisCW.Yao@moxa.com>  Wed, 07 Aug 2019 14:24:58 +0800
+ -- Remus Wu <remusty.wu@moxa.com>  Wed, 20 Nov 2019 18:41:20 +0800
