@@ -1,0 +1,5 @@
+moxa-it87-wdt-driver (5.2+1.0.0) stretch; urgency=medium
+
+  * Initial release
+
+ -- Remus Wu <remusty.wu@moxa.com>  Wed, 20 Nov 2019 18:41:20 +0800
