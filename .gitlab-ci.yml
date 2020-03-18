@@ -2,18 +2,13 @@ variables:
     GIT_DEPTH: "1"
 
 stages:
-    - develop_build
-    - release_build
-    - prepare_develop_debs
-    - prepare_release_debs
+    - mil-internal-release_build
+    - prepare_mil-internal-release_debs
 
-develop_build:
+mil-internal-release_build:
     tags:
         - Runner-Stretch
-    stage: develop_build
-    except:
-      refs:
-        - stretch
+    stage: mil-internal-release_build
     script:
         - echo "deb http://mil-internal-apt:8080/mirror-debian_20190909/ stretch main contrib non-free" > /etc/apt/sources.list
         - curl -fsSL http://mil-internal-apt:8080/mil_internal_apt.gpg | apt-key add -
@@ -31,56 +26,17 @@ develop_build:
         - ./*.changes
         - ./*.deb
 
-release_build:
+prepare_mil-internal-release_debs:
     tags:
         - Runner-Stretch
-    stage: release_build
+    stage: prepare_mil-internal-release_debs
     only:
       refs:
-        - stretch
-    script:
-        - echo "deb http://mil-internal-apt:8080/mirror-debian_20190909/ stretch main contrib non-free" > /etc/apt/sources.list
-        - curl -fsSL http://mil-internal-apt:8080/mil_internal_apt.gpg | apt-key add -
-        - apt-get update
-        - apt-get install -y -qq --no-install-recommends build-essential devscripts
-        - apt-get build-dep ./ -y
-        - dpkg-buildpackage -us -uc -b
-        - mv ../*.buildinfo .
-        - mv ../*.changes .
-        - mv ../*.deb .
-    artifacts:
-        name: "${CI_PROJECT_NAME}"
-        paths:
-        - ./*.buildinfo
-        - ./*.changes
-        - ./*.deb
-
-prepare_develop_debs:
-    tags:
-        - Runner-Stretch
-    stage: prepare_develop_debs
-    only:
-      refs:
-        - stretch-develop
+        - stretch/master
     dependencies:
-        - develop_build
+        - mil-internal-release_build
     when: manual
     script:
-        - mkdir -p /cache/stretch/develop/
-        - cp *.deb /cache/stretch/develop/
-        - ls /cache/stretch/develop/
-
-prepare_release_debs:
-    tags:
-        - Runner-Stretch
-    stage: prepare_release_debs
-    only:
-      refs:
-        - stretch
-    dependencies:
-        - release_build
-    when: manual
-    script:
-        - mkdir -p /cache/stretch/release/
-        - cp *.deb /cache/stretch/release/
-        - ls /cache/stretch/release/
+        - mkdir -p /cache/stretch/mil-internal-release/
+        - cp *.deb /cache/stretch/mil-internal-release/
+        - ls /cache/stretch/mil-internal-release/
