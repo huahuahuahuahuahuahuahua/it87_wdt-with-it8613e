@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-KRELEASE=4.9.0-11-amd64
+KRELEASE=4.9.0-12-amd64
 
 %:
 	dh $@
