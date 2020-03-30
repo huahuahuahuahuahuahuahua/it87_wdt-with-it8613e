@@ -1,3 +1,9 @@
+moxa-it87-wdt-driver (5.2+1.1.0) stretch; urgency=medium
+
+  * update dependence to Debian 9.12
+
+ -- Remus Wu <remusty.wu@moxa.com>  Thu, 19 Mar 2020 17:00:26 +0800
+
 moxa-it87-wdt-driver (5.2+1.0.0) stretch; urgency=medium
 
   * Initial release
