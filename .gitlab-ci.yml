@@ -10,7 +10,7 @@ mil-internal-release_build:
         - Runner-Stretch
     stage: mil-internal-release_build
     script:
-        - echo "deb http://mil-internal-apt:8080/mirror-debian_20200211/ stretch main contrib non-free" > /etc/apt/sources.list
+        - echo "deb http://mil-internal-apt:8080/mirror-debian_20200718/debian stretch main" > /etc/apt/sources.list
         - curl -fsSL http://mil-internal-apt:8080/mil_internal_apt.gpg | apt-key add -
         - apt-get update
         - apt-get install -y -qq --no-install-recommends build-essential devscripts
