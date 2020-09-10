@@ -4,7 +4,7 @@ set -e
 
 # Ensure modules.dep is update
 update_moddep() {
-	depmod 4.9.0-12-amd64
+	depmod 4.9.0-13-amd64
 }
 
 case "$1" in
