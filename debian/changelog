@@ -1,3 +1,11 @@
+moxa-it87-wdt-driver (4.9.228+1.0.0+deb9) stretch; urgency=medium
+
+  * fix: add IT8786 support
+  * refactor: update it87_wdt.c to kernel 4.9.0 from linux-source-4.9 4.9.228-1
+  * refactor: replacing moxa-it87-wdt-driver 5.2+1.2.0 whole packages
+
+ -- Elvis Yao (姚家瑋) <ElvisCW.Yao@moxa.com>  Tue, 06 Oct 2020 10:35:57 +0800
+
 moxa-it87-wdt-driver (5.2+1.2.0) stretch; urgency=medium
 
   * update dependence to Debian 9.13

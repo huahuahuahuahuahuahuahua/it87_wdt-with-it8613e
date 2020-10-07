@@ -9,13 +9,18 @@ Build-Depends:
  linux-headers-4.9.0-13-amd64
 Homepage: https://www.moxa.com/
 
-Package: moxa-it87-wdt-driver-amd64
+Package: moxa-it87-wdt-driver-4.9.0-amd64
 Architecture: amd64
 Depends:
  ${misc:Depends},
  linux-image-4.9.0-13-amd64
 Replaces:
- linux-image-4.9.0-13-amd64
+ linux-image-4.9.0-13-amd64,
+ moxa-it87-wdt-driver-amd64
+Provides:
+ moxa-it87-wdt-driver-amd64
+Conflicts:
+ moxa-it87-wdt-driver-amd64
 Description: IT87 Watchdog Timer
   This is the driver for the hardware watchdog on the ITE IT8607,
   IT8620, IT8622, IT8625, IT8628, IT8655, IT8665, IT8686, IT8702,
